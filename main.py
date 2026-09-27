@@ -32,9 +32,9 @@ def find_and_display_expense(expenses):
     else:
         print("Expense not found")
 
-def save_employees(employees):
-    with open("employees.json", "w") as file:
-        json.dump(employees, file, indent=4)
+def save_expenses(expenses):
+    with open("expenses.json", "w") as file:
+        json.dump(expenses, file, indent=4)
 
 def add_expense(expenses):
     name = input("Enter name of expense? ")
