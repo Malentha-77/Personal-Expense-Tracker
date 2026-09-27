@@ -1,8 +1,7 @@
 import json
-from unicodedata import category
 
-with open('expenses.json', 'r') as f:
-    expenses = json.load(f)
+with open("expenses.json", "r") as file:
+    expenses = json.load(file)
 
 def show_expenses(expenses):
      for expense in expenses:
@@ -13,7 +12,7 @@ def show_expenses(expenses):
 
 def find_expense(expenses, name):
     for expense in expenses:
-        if expense['name'].lower() == name.lower():
+        if expense["name"].lower() == name.lower():
             return expense
     return None
     
@@ -56,6 +55,10 @@ def add_expense(expenses):
     if not category:
         print("Category cannot be empty.")
         return
+    
+    if find_expense(expenses, name):
+        print("Expense already exists.")
+        return
 
     new_expense = {
     "name": name,
@@ -67,34 +70,3 @@ def add_expense(expenses):
     save_expenses(expenses)
     print("Expense added.")
 
-def menu(employees):
-    choice = ""
-
-    while choice != "5":
-        print("\n1. Show employees")
-        print("2. Find employee")
-        print("3. Add employee")
-        print("4. Remove employee")
-        print("5. Exit")
-
-        choice = input("Choose an option: ")
-
-        if choice == "1":
-            show_employees(employees)
-
-        elif choice == "2":
-            find_and_display_employee(employees)
-
-        elif choice == "3":
-            add_employee(employees)
-            
-        elif choice == "4":
-            remove_employee(employees)
-
-        elif choice == "5":
-            print("Goodbye!")
-
-        else:
-            print("Invalid choice")
-
-menu(expenses)
