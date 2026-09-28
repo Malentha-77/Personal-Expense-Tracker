@@ -71,3 +71,9 @@ def add_expense(expenses):
     save_expenses(expenses)
     print("Expense added.")
 
+def total_expenses(expenses):
+    total = 0
+    for expense in expenses:
+            total += expense['amount']
+    return total
+        
