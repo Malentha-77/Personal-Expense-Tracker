@@ -47,7 +47,7 @@ def add_expense(expenses):
         amount = int(input("Enter amount of expense? "))
 
     except ValueError:
-        print("Amount cannot be empty.")
+        print("Invalid amount. Please enter a number. ")
         return
 
     category = input("Enter category of expense? ")
@@ -61,10 +61,11 @@ def add_expense(expenses):
         return
 
     new_expense = {
-    "name": name,
-    "amount": amount,
-    "category": category
-}
+        
+        "name": name,
+        "amount": amount,
+        "category": category
+    }
 
     expenses.append(new_expense)
     save_expenses(expenses)
