@@ -125,6 +125,6 @@ def menu(expenses):
 
         elif choice == "6":
             print("Exited the program.")
-            
+
         else:
             print("Invalid choice. Please try again.")
