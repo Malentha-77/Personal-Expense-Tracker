@@ -93,3 +93,16 @@ def remove_expense(expenses):
     
     else:
         print("Expense not found")     
+
+def menu(expenses):
+    choice = ""
+    while choice != "6":
+        print("\nExpense Tracker Menu:")
+        print("1. Show all expenses")
+        print("2. Find an expense by name")
+        print("3. Add a new expense")
+        print("4. Remove an expense")
+        print("5. Show total expenses")
+        print("6. Exit")
+
+        choice = input("Choose an option: ")
