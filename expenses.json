@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "name": "Rent",
+        "amount": 2000,
+        "category": "Bills"
+    },
+    {
+        "name": "Water",
+        "amount": 1500,
+        "category": "Bills"
+    },
+    {
+        "name": "Food",
+        "amount": 500,
+        "category": "Groceries"
+    }
+]

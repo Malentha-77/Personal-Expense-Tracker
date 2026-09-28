@@ -128,3 +128,5 @@ def menu(expenses):
 
         else:
             print("Invalid choice. Please try again.")
+            
+menu(expenses)
