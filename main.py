@@ -106,3 +106,25 @@ def menu(expenses):
         print("6. Exit")
 
         choice = input("Choose an option: ")
+
+        if choice == "1":
+            show_expenses(expenses)
+
+        elif choice == "2":
+            find_and_display_expense(expenses)
+
+        elif choice == "3":
+            add_expense(expenses)
+
+        elif choice == "4":
+            remove_expense(expenses)
+
+        elif choice == "5":
+            total = total_expenses(expenses)
+            print(f"Total expenses: {total}")
+
+        elif choice == "6":
+            print("Exited the program.")
+            
+        else:
+            print("Invalid choice. Please try again.")
