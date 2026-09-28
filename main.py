@@ -76,4 +76,20 @@ def total_expenses(expenses):
     for expense in expenses:
             total += expense['amount']
     return total
-        
+
+def remove_expense(expenses):
+    name = input("Enter name of expense to remove? ")
+    
+    if not name:
+        print("Name cannot be empty.")
+        return
+
+    expense = find_expense(expenses, name)
+    
+    if expense:
+        expenses.remove(expense)
+        save_expenses(expenses)
+        print("Expense removed.")
+    
+    else:
+        print("Expense not found")     
